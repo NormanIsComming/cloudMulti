@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: orderservice
+  cloud:
+    nacos:
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: public
+      server-addr: 127.0.0.1:8848
+logging:
+  level:
+    root: info #设置全局日志级别，此处默认为info,生产环境可设置为更高级别的warn
+    com.xsh: debug #指定对应目录的日志级别，在此目录内的日志级别为debug
+
+file: log/blog-dev.log #设置日志存放目录
